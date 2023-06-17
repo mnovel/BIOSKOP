@@ -1,0 +1,10 @@
+DirectoryIndex view/index.php
+RewriteEngine on
+
+# Proses Page
+RewriteRule ^proses/([^/]+)$ function/$1.php [L]
+RewriteRule ^logout\/?$ view/logout.php [L]
+
+# Function Page
+RewriteRule ^admin/([^/]+)$ view/admin/$1.php [L]
+RewriteRule ^user/([^/]+)$ view/user/$1.php [L]
